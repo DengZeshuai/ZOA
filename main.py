@@ -163,11 +163,10 @@ if __name__ == '__main__':
 
     # configure the domains for adaptation
     if args.corruption == '15c':
-        # corruptions = ['gaussian_noise', 'shot_noise', 'impulse_noise', 
-        #                 'defocus_blur', 'glass_blur', 'motion_blur', 'zoom_blur', 
-        #                 'snow', 'frost', 'fog', 'brightness', 
-        #                 'contrast', 'elastic_transform', 'pixelate', 'jpeg_compression']
-        corruptions = ['gaussian_noise', 'defocus_blur', 'frost', 'jpeg_compression']
+        corruptions = ['gaussian_noise', 'shot_noise', 'impulse_noise', 
+                        'defocus_blur', 'glass_blur', 'motion_blur', 'zoom_blur', 
+                        'snow', 'frost', 'fog', 'brightness', 
+                        'contrast', 'elastic_transform', 'pixelate', 'jpeg_compression']
     else:
         corruptions = [args.corruption]
     
