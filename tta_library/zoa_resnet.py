@@ -241,7 +241,8 @@ def configure_model(model):
     fix_layers += ['model.layer4']
     for name, param in model.named_parameters():
         for fix_name in fix_layers:
-            if fix_name in name:
+            # if fix_name in name:
+            if fix_name in name or name.find('bn3') >= 0 or name.find('downsample.1') >= 0:
                 param.requires_grad_(False)
 
     return model

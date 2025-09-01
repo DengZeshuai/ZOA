@@ -78,8 +78,8 @@ def get_args():
     parser = argparse.ArgumentParser(description='PyTorch ImageNet-C Testing')
 
     # path of data, output dir
-    parser.add_argument('--data', default='/lichenghao/cgh/datasets/imagenet', help='path to dataset')
-    parser.add_argument('--data_corruption', default='/lichenghao/cgh/datasets/imagenet-c', help='path to corruption dataset')
+    parser.add_argument('--data', default='./datasets/imagenet', help='path to dataset')
+    parser.add_argument('--data_corruption', default='./datasets/imagenet-c', help='path to corruption dataset')
     parser.add_argument('--use_in1k_norm', action='store_true', help='use the normalize of in1k in test transform')
     parser.add_argument('--use_in1k_norm_c', action='store_true', help='use the normalize of in1k in test transform for corruption')
     parser.add_argument('--reset', action='store_true', help='reset the parameters after adaptation on one corruption')
